@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+@import url(normalize.css);
+
+:root {
+    --BGCOLOR: #16161D;
+    --COLOR_BLACK: #131417;
+    /* morado  color: #6C63FF*/
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--BGCOLOR);
+    color:white;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 0.3fr;
+    grid-template-areas:
+        "menu"
+        "home_page"
+        "apps"
+        "footer";
+}
+
+/* Organizacion de secciones */
+
+.menu {
+    display: grid;
+    grid-area: menu;
+    margin-bottom: 20px;
+}
+
+.homePage {
+    /* border: 5px solid black;*/
+    display: grid;
+    grid-area: home_page;
+}
+
+.apps{
+    display: grid;
+    grid-area: apps;
+}
+
+.footer{
+    display: grid;
+    grid-area: footer;
+}
+
+/* Modificaciones */
+
+/* menu */
+
+.menu__contenido {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 8vh;
+    align-items: center;
+    margin: 0px;
+    background-color: beige;
+}
+
+.menu__contenido-item {
+    padding-left: 15px;
+    text-align: center;
+}
+
+.menu__contenido-item a {
+    text-decoration: none;
+    color: var(--BGCOLOR);
+    font-size: 3vh;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0px 10px 5px 10px;
+}
+
+.menu__contenido-item a:hover {
+    /* border-bottom: 2px solid #000; */
+    border-bottom: 2px solid #000;
+}
+
+/* homePage */
+
+.homePage__content {
+    display: grid;
+    grid-template-areas:
+        "text img"
+        "text img"
+        "wave wave";
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: 1fr 1fr auto;
+    row-gap: 30px;
+}
+
+.homePage__content-text {
+    display: grid;
+    grid-area: text;
+    text-align: center;
+    align-items: center;
+}
+
+.homePage__content-text-title {
+    font-size: 10vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homePage__content-text-description {
+    padding: 0px 50px 0px 50px;
+    font-size: 3vh;
+    letter-spacing: 1.5px;
+
+}
+
+.homePage__content-img {
+    display: grid;
+    grid-area: img;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.img-index {
+    width: 80%;
+    height: auto;
+}
+
+.wave{
+    display: grid;
+    grid-area: wave;
+}
+
+.ola{
+    height: 15vh;
+    width: 100%;
+    /* 
+            .wave{
+            display: grid;
+            grid-area: wave;
+        }
+        
+        .ola{
+            width: 100%;
+        }
+*/
+}
+
+
+
+/* apps */
+
+.apps__contenido{
+    text-align: center;
+    background-color: white;
+}
+
+.apps__contenido h1{
+    color:#131417
+}
+
+.apps__contenido-aplicaciones{
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    "titulo titulo"
+    "aplicacion1 aplicacion2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr;
+    column-gap: 30px;
+}
+
+.apps__contenido-aplicaciones-1{
+    grid-area: aplicacion1;
+
+}
+
+.apps__contenido-aplicaciones-2{
+    grid-area: aplicacion2;
+}
+.apps__contenido-titulo{
+    grid-area: titulo;
+}
+
+
+.apps__contenido-h1{
+    font-size: 10vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--COLOR_BLACK);
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 60vh;
+}
+
+.card-title{
+    padding: 0px 30px 0px 30px;
+    font-size: 3vh;
+}
+
+.card-description{
+    padding: 0px 30px 0px 30px;
+    font-size: 2.5vh;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+
+
+/* CSS */
+.button-link {
+  background-color: white;
+  border-radius: 6px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: var(--COLOR_BLACK);
+  cursor: pointer;
+  font-family: Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  text-align: center;
+  width: 30vh;
+}
+
+.footer{
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.footer__contenido{
+    display: grid;
+    grid-template-areas: 
+    "otras redes direccion"
+    "creador creador creador";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 30vh;
+    row-gap: 3vh;
+}
+
+.footer__contenido-redes_sociales{
+    grid-area: redes;
+}
+
+.footer__contenido-otras_redes{
+    grid-area: otras;
+}
+
+.footer__contenido-direccion{
+    grid-area: direccion;
+}
+
+.footer__contenido-creador{
+    grid-area: creador;
+}
+
+.link{
+    cursor:pointer;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .ola{
+        height: 10vh;
+        width: 100%;
+    }
+}

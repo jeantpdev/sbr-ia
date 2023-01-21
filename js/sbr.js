@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 Respuesta_acidez: Respuesta_acidez,
                 Respuesta_vomitos: Respuesta_vomitos
             }
+
     
             axios({
                 method: "POST",

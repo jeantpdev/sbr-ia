@@ -8,8 +8,8 @@
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -20,12 +20,14 @@ body {
 
 .page {
     display: grid;
-    grid-template-rows: auto 1fr 1fr 0.3fr;
+    grid-template-rows: auto auto 1fr 0.7fr 0.2fr;
     grid-template-areas:
         "menu"
         "home_page"
+        "guide"
         "apps"
         "footer";
+    text-align: center;
 }
 
 /* Organizacion de secciones */
@@ -40,6 +42,11 @@ body {
     /* border: 5px solid black;*/
     display: grid;
     grid-area: home_page;
+}
+
+.guide{
+    display: grid;
+    grid-area: guide;
 }
 
 .apps{
@@ -62,7 +69,6 @@ body {
     list-style: none;
     height: 8vh;
     align-items: center;
-    margin: 0px;
     background-color: beige;
 }
 
@@ -106,18 +112,16 @@ body {
 }
 
 .homePage__content-text-title {
-    font-size: 10vh;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 7vh;
+    justify-content: center
 }
 
 .homePage__content-text-description {
     padding: 0px 50px 0px 50px;
-    font-size: 3vh;
-    letter-spacing: 1.5px;
-
+    font-size: 2.5vh;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
 }
 
 .homePage__content-img {
@@ -141,22 +145,67 @@ body {
 .ola{
     height: 15vh;
     width: 100%;
-    /* 
-            .wave{
-            display: grid;
-            grid-area: wave;
-        }
-        
-        .ola{
-            width: 100%;
-        }
-*/
 }
 
+/* guide */
 
+
+.guide__contenido{
+    text-align: center;
+    background-color: white;
+}
+
+.card2{
+    display: grid;
+    grid-template-areas:
+    "number title"
+    "number description"
+    "image image";
+    color: #16161D;
+    margin-left: 150px;
+    margin-right: 150px;
+    align-items: center;
+    justify-items: start;
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card2-number{
+    display: grid;
+    grid-area: number;
+    border: 2px solid black;
+    color: #16161D;
+    border-radius: 50%;
+    padding: 0px 30px 0px 30px;
+    font-size: 1.2vw;
+}
+
+.card2-title{
+    display: grid;
+    grid-area: title;
+    font-size: 1.2vw;
+}
+
+.card2-description{
+    display: grid;
+    grid-area: description;
+    text-align: start;
+    letter-spacing: 1px;
+    justify-content: center;
+    font-size: 1.2vw;
+}
+
+.card2-image{
+    display: grid;
+    grid-area: image;
+}
+
+.img-instruction{
+    width: 100%;
+    height: auto;
+}
 
 /* apps */
-
 .apps__contenido{
     text-align: center;
     background-color: white;
@@ -167,21 +216,12 @@ body {
 }
 
 .apps__contenido-aplicaciones{
-    margin-left: 150px;
-    margin-right: 150px;
-    text-align: center;
     display: grid;
-    grid-template-areas:
-    "titulo titulo"
-    "aplicacion1 aplicacion2";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.2fr;
-    column-gap: 30px;
+    justify-content: center;
 }
 
 .apps__contenido-aplicaciones-1{
     grid-area: aplicacion1;
-
 }
 
 .apps__contenido-aplicaciones-2{
@@ -190,7 +230,6 @@ body {
 .apps__contenido-titulo{
     grid-area: titulo;
 }
-
 
 .apps__contenido-h1{
     font-size: 10vh;
@@ -204,6 +243,7 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     height: 60vh;
+    width: 50vw;
 }
 
 .card-title{
@@ -215,10 +255,8 @@ body {
     padding: 0px 30px 0px 30px;
     font-size: 2.5vh;
     letter-spacing: 1px;
-    font-weight: 300;
+    font-weight: 400;
 }
-
-
 
 /* CSS */
 .button-link {
@@ -229,11 +267,16 @@ body {
   color: var(--COLOR_BLACK);
   cursor: pointer;
   font-family: Roboto,"Helvetica Neue",Ubuntu,sans-serif;
-  font-size: 100%;
-  height: 44px;
+  font-size: 1.3vw;
+  height: 8vh;
   line-height: 1.15;
   text-align: center;
   width: 30vh;
+}
+
+.button-link a{
+    text-decoration: none;
+    color:#131417;
 }
 
 .footer{

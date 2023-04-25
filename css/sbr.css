@@ -1,6 +1,6 @@
 :root {
-    --BGCOLOR: #16161D;
-    --COLOR_BLACK: #131417;
+    --BGCOLOR: rgb(29, 30, 32);
+    --COLOR_BLACK: rgb(29, 30, 32);
     /* morado  color: #6C63FF*/
 }
 
